@@ -1,0 +1,14 @@
+{
+  "name": "possumbot",
+  "version": "0.0.1",
+  "description": "this bot is made to crash discord servers",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "barsik",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
