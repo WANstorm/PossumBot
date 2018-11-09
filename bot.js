@@ -4,7 +4,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
 	console.log(`Hackabot Is Now Activated`);
-	bot.user.setActivity(`With Knieves`);
+	bot.user.setActivity(`With Knives`);
 
 	try {
 		//Generates a invite link in the console.
