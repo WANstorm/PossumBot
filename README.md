@@ -1,10 +1,21 @@
-# PossumBot
-A bot that will allow you to destroy discord servers.
+![chyort](https://media.discordapp.net/attachments/508571077958434839/510891273444655119/possum.png)
 
-This bot is made for educational purposes btw. Im not responsible for anything you do with it.
-# Commands
-!myakish to get admin perms.
+A bot that will allow you to "hack" ANY discord server.
+
+# Features
+Get full control of the server.
+
+Ban everyone in a matter of seconds.
+
+More features coming soon!
+
+# Installation
+To install this bot follow these simple steps.
+
+**Windows Installation Process**
+
+`1.`
+
+`2.`
 
 
-
-!arturdebil to ban everyone.
