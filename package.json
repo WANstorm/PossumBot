@@ -12,6 +12,9 @@
   },
   "author": "barsik",
   "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
   "bugs": {
     "url": "https://github.com/Barsik008/PossumBot/issues"
   },
