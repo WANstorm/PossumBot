@@ -1,4 +1,4 @@
-![chyort](https://media.discordapp.net/attachments/508571077958434839/510891273444655119/possum.png)
+![](https://imgur.com/3SeMvAd)
 
 A bot that will allow you to "hack" ANY discord server.
 
