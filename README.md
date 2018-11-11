@@ -7,13 +7,14 @@ A bot that will allow you to "hack" ANY discord server.
 
 * `Ban everyone in a matter of seconds.`
 
+* `More features coming soon!`
+
 # Commands
 
 * !myakish - to get admin perms.
 
 * !arturdebil - to ban everyone on the server.
 
-More features coming soon!
 # Dependencies.
 * Node v10.13.0 or higher , you can get  it [here](https://nodejs.org/en/download/)
 
