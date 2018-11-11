@@ -65,3 +65,8 @@ Type `node bot.js` into the console.
 The bot should now be activated.
 
 10. A link will be generated in the console use it to invite the bot.
+-----
+
+# Disclaimer
+
+Im not responsible for what you do. This bot is made for educational purposes only.
