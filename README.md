@@ -1,4 +1,4 @@
-![](https://imgur.com/3SeMvAd)
+![](https://user-images.githubusercontent.com/8159670/48314121-8c516100-e5cd-11e8-8874-04c0dc1cc4bc.png)
 
 A bot that will allow you to "hack" ANY discord server.
 
