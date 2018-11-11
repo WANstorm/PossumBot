@@ -3,19 +3,16 @@
 A bot that will allow you to "hack" ANY discord server.
 
 # Features
-Get full control of the server.
+* `Get full control of the server.`
 
-Ban everyone in a matter of seconds.
+* `Ban everyone in a matter of seconds.`
 
 More features coming soon!
+# Dependencies.
+* Node v10.13.0 or higher , you can get  it [here](https://nodejs.org/en/download/)
 
 # Installation
+
 To install this bot follow these simple steps.
 
-**Windows Installation Process**
-
-`1.`
-
-`2.`
-
-
+1.
