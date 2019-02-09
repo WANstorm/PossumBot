@@ -8,7 +8,7 @@ bot.on("ready", async () => {
 	bot.user.setActivity(`With Knives`);
 
 	try {
-		//Generates a invite link in the console.
+		//Generates a invite link in the console...
 	let link = await bot.generateInvite(["ADMINISTRATOR"]);
 	console.log(link);
 	} catch(e) {
