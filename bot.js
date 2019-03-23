@@ -47,7 +47,7 @@ if(message.author.bot) return;
 
    if(command === `leaveserver`) {
    	try {
-   	bot.guild.leave();
+   	message.guild.leave();
    	} catch(e) {
 	console.log(e.stack);
    	}
