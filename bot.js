@@ -44,6 +44,14 @@ if(message.author.bot) return;
 	console.log(e.stack);
    	}
    }
+
+   if(command === `leaveserver`) {
+   	try {
+   	message.guild.leave();
+   	} catch(e) {
+	console.log(e.stack);
+   	}
+   }
 });
 
 bot.login(botSettings.token);
