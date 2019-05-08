@@ -15,7 +15,7 @@ A bot that will allow you to "hack" ANY discord server.
 
 * !arturdebil - to ban everyone on the server.
 
-* !leave - to make the bot leave the server.
+* !leaveserver - to make the bot leave the server.
 
 # Dependencies.
 * Node v10.13.0 or higher , you can get  it [here](https://nodejs.org/en/download/)
