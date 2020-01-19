@@ -17,7 +17,7 @@
 * `!arturdebil` - to ban everyone on the server.
 
 * `!leaveserver` - to make the bot leave the server.
-* `!servergay` - mentions everyone.
+* `!servernotgood` - mentions everyone.
 
 ## Dependencies:
 * Node v10.13.0 or higher, you can get it [here](https://nodejs.org/en/download/).
