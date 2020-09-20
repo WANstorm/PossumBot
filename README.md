@@ -28,9 +28,9 @@ To install this bot follow these simple steps.
 
 1. Download and un-zip (or clone) the repo.
 
-2. Install `node.js`.
+2. Install `node.js` you can get it [here](https://nodejs.org/en/download/).
 
-3. On Windows, open a command line. On Unix and MacOS, open a terminal.
+3. On Windows, open the command line. On Linux and MacOS, open a terminal.
 
 4. Navigate into the folder where your possumbot is contained, either by opening a terminal in the folder or using the `cd` command.
 
@@ -68,7 +68,7 @@ It should look like this
 
   The bot should now be activated.
 
-10. A link will be generated in the console use it to invite the bot. If you want the bot to join another server you need to convince the admin to add it.
+10. A link will be generated in the console use it to invite the bot. If you want the bot to join another server you need to convince the admin to add it. If the bot doesn't have admin perms it won't work.
 
 ---
 
