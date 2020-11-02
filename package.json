@@ -3,17 +3,14 @@
   "version": "0.0.1",
   "description": "a bot that will allow you to destroy discord servers",
   "main": "bot.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Barsik008/PossumBot.git"
   },
-  "author": "barsik",
+  "author": "qazxswedc",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^12.0.0"
   },
   "bugs": {
     "url": "https://github.com/Barsik008/PossumBot/issues"

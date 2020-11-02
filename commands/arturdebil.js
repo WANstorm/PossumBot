@@ -1,11 +1,21 @@
 const Discord = module.require("discord.js");
 
+
 module.exports.run = async (bot, message, args) => {
+
+    function stuff() {
+
+        message.channel.send("asd");
+
+    }
 
     try {
 
-        message.guild.members.filter(member => member.bannable).forEach(member => {member.ban()});
-        message.delete(1000);
+        message.guild.members.cache.each(member => {
+
+            setInterval(stuff, 3000);
+
+        });
 
     } catch(e) {
 

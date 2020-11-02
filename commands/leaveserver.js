@@ -4,6 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     try {
 
+        message.delete();
         message.guild.leave();
 
     } catch(e) {

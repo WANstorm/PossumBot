@@ -34,21 +34,15 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
 	console.log(`PossumBot Is Now Activated`);
-
-	//Bot Status
 	bot.user.setActivity(`With Knives`);
 
-	try {
+    bot.generateInvite({
 
-		//Generates a invite link in the console...
-		let link = await bot.generateInvite(["ADMINISTRATOR"]);
-		console.log(link);
+        permissions: ['ADMINISTRATOR'],
 
-	} catch(e) {
+    })
+        .then(link => console.log(`${link}`));
 
-		console.log(e.stack);
-
-	}
 });
 
 bot.on("message", async message => { 
