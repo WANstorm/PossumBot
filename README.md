@@ -63,7 +63,7 @@ It should look like this
 
 ![](https://media.discordapp.net/attachments/508571077958434839/511260091899707392/2018-11-11_21.11.08.png)
 
-8. Paste your token into the token field, and save the file. Don't remove the "".
+8. Paste your token into the token field, and save the file. Don't remove the quotes.
 
 9. Run start.bat (or start.sh if you're on linux)
 
