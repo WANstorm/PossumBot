@@ -48,6 +48,7 @@ You should see something like this:
 
 Navigate to the bot settings
 
+Enable privileged gateway intents.
 ![Enable privileged gateway intents.](https://media.discordapp.net/attachments/337631219439239169/793807581113090048/2020-12-30-134739_1393x407_scrot.png)
 
 After enabling privileged gateway intents copy your token.
@@ -65,8 +66,6 @@ It should look like this
 8. Paste your token into the token field, and save the file. Don't remove the "".
 
 9. Run start.bat (or start.sh if you're on linux)
-
-  The bot should now be activated.
 
 10. A link will be generated in the console use it to invite the bot. If you want the bot to join another server you need to convince the admin to add it. If the bot doesn't have admin perms it won't work.
 
