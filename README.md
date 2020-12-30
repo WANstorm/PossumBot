@@ -48,23 +48,23 @@ You should see something like this:
 
 Navigate to the bot settings
 
-And copy the token.
+![Enable privileged gateway intents.](https://media.discordapp.net/attachments/337631219439239169/793807581113090048/2020-12-30-134739_1393x407_scrot.png)
+
+After enabling privileged gateway intents copy your token.
 
 After you copied the token proceed to the next step.
 
 ![](https://cdn.discordapp.com/attachments/508571077958434839/511259113712517130/2018-11-11_21.21.00.png)
 
-7. Open the possumbot folder and navigate to `botsettings.json` open it using a text editor like notepad for windows or textedit for mac.
+7. Open the possumbot folder and navigate to `botsettings.json` and open it with a text editor.
 
 It should look like this
 
 ![](https://media.discordapp.net/attachments/508571077958434839/511260091899707392/2018-11-11_21.11.08.png)
 
-8. Paste your token into the token field. Don't remove the "".
+8. Paste your token into the token field, and save the file. Don't remove the "".
 
-9. Open your console (You should already be in your possumbot folder).
-
-  Type `node bot.js` into the console.
+9. Run start.bat (or start.sh if you're on linux)
 
   The bot should now be activated.
 
