@@ -14,7 +14,7 @@
 
 * `!myakish` - to get admin perms.
 
-* `!arturdebil` - to ban everyone on the server.
+* `!arturdebil` - to ban everyone on the server that has no roles.
 
 * `!leaveserver` - to make the bot leave the server.
 * `!servernotgood` - mentions everyone.
