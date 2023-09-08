@@ -54,7 +54,7 @@ bot.on("message", async message => {
     }
 
 	let messageArray = message.content.split(/\s+/g);
-	let command = messageArray[0];
+	let command = messageArray[1];
 	let args = messageArray.slice(1);
 
 	let cmd = bot.commands.get(command.slice(prefix.length));
